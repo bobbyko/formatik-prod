@@ -6,10 +6,10 @@ docker service create \
     -p 27017:27017 \
     --name mongo01 \
     --hostname mongo01 \
-    mongo:3.4.4 \
+    mongo:3.4.6 \
     --auth
 
-docker run --rm -it --add-host=mongo01:10.134.22.243 mongo:3.4.4 mongo mongodb://mongo01:27017/admin
+docker run --rm -it mongo:3.4.6 mongo mongodb://mongo01:27017/admin
 
 >db.createUser({ user: 'admin', pwd: 'kR8h%a4a', roles: [ 
         {
