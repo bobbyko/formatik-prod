@@ -1,5 +1,5 @@
 docker service create \
-    --network mongo_net \
+    --network formatik_net \
     --replicas 1 \
     --constraint 'node.labels.db == true' \
     --mount type=volume,source=FormatikMongo,destination=/data/db,volume-label="mongo=01" \
